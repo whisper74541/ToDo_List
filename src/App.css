@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+.entire {
+  display: flex;
+  flex-direction: column;
+}
+
+.ToDo_List {
+  display: flex;
+  background-color: rgb(134, 67, 16);
+  justify-content: center;
+}
+
+.Add_ToDo_List {
+  display: flex;
+  justify-content: flex-start;
+  /* flex-direction: column; */
+}
+
+/* .Click_Add_ToDo {
+
+} */
