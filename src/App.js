@@ -4,8 +4,8 @@ import { useState } from 'react';
 // import styled from 'styled-components';
 
 function App() {
-  const [ToDo_List, setToDo_List] = useState([]);
-  const [test, setTest] = useState([]);
+  const [ToDo_List, setToDo_List] = useState([]); // 일정을 전체적으로 받는 state
+  const [test, setTest] = useState([]); // 일정 추가 할 때 입력받는 state
 
   function Add_ToDo_List() {
     let temp = test;
@@ -22,7 +22,7 @@ function App() {
 
   }
 
-   function ToDo_List_All_Delect(){
+   function ToDo_List_All_Delect(){ // 모든 항목 삭제
     setToDo_List([]);
   }
 
@@ -30,7 +30,7 @@ function App() {
 
   }
 
-  function ToDo_List_Delect(index) {
+  function ToDo_List_Delect(index) { // 선택한 항목 삭제
     let temp = [...ToDo_List];
     temp.splice(index,1);
     setToDo_List(temp);
