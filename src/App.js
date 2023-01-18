@@ -23,8 +23,8 @@ function App() {
   }
 
    function ToDo_List_All_Delect(){
-
-}
+    setToDo_List([]);
+  }
 
   function ToDo_List_Modify() {
 
@@ -37,29 +37,35 @@ function App() {
   }
 
   return (
-    <div>
-      <h1> 2023 - 01 - 16 </h1>
-      <div className='entire'> 
-        <h1 className='ToDo_List'> ToDo List </h1>
-        <div className='Add_ToDo_List'>
-          <input value = {test} onChange={(e) => {setTest(e.target.value)}} placeholder='일정 추가'/>
-          <button onClick={() => {Add_ToDo_List()}}> + </button>
+    <div className='entirebackgroundcolor'>
+      <div className = 'test'>
+        <div className='entire'> 
+          <h1 className='ToDo_List'> ToDo List </h1>
+          <div className='Add_ToDo_List'>
+            <input className='ToDo_List_Input' value = {test} onChange={(e) => {setTest(e.target.value)}}  placeholder='일정 추가'/>
+            <button onClick={() => {Add_ToDo_List()}}> ADD </button>
+          </div>
+          {/* <div><input type="text" class="coupon input-res"/></div> */}
+          <div className='test_button'>
+            <button onClick={ToDo_List_All_Delect}> 전체 삭제 </button>
+          </div>
+          <div className='ToDo_List_Print'>
+          {
+            ToDo_List.map((value,index) => {
+              return(
+                <div className='ToDo_List_Element'>
+                  <input type="checkbox"/>
+                  <span><strong>{index+1}.</strong> {value}</span>
+                  {" "}{" "}
+                  <button> 수정 </button>
+                  <button onClick={() => {ToDo_List_Delect(index)}}> 삭제 </button>
+                </div>
+              )
+            })
+          }
+        </div>
         </div>
       </div>
-      <button onClick={ToDo_List_All_Select}> 전체 선택 </button>
-      <button onClick={ToDo_List_All_Delect}> 삭제 </button>
-      {
-        ToDo_List.map((value,index) => {
-          return(
-            <div>
-              <input type="checkbox"/>
-              <span><strong>{index+1}.</strong> {value}</span>
-              <button> 수정 </button>
-              <button onClick={() => {ToDo_List_Delect(index)}}> 삭제 </button>
-            </div>
-          )
-        })
-      }
     </div>
   );
 }

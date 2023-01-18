@@ -37,21 +37,97 @@
   }
 }
 
+@font-face {
+  font-family: 'SaenggeoJincheon';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/SaenggeoJincheon.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+input,button{
+  size: 20px;
+	border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+button {
+  font-family: 'SaenggeoJincheon';
+}
+
+input::placeholder{
+  /* color: blue; */
+  font-size: 20px;
+  font-family: 'SaenggeoJincheon';
+}
+
+.entirebackgroundcolor{
+  background-color: darkgray;
+}
+
+.test{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  border: solid 6px;
+  border-radius: 6px;
+  width:600px;
+  height: 1000px;
+}
+
+.coupon {
+  width: 100%;
+  max-width: 500px;
+  outline: none;
+  margin: 0;
+  box-sizing: border-box;
+  height: 22px;
+}
+
 .entire {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  /* align-content: center; */
+  background-color: rgb(255, 255, 255);
+  width: 600px;
+  height: 1000px;
 }
 
 .ToDo_List {
   display: flex;
-  background-color: rgb(134, 67, 16);
+  /* background-color: rgb(134, 67, 16); */
   justify-content: center;
+  border: 5px;
+  font-family: 'SaenggeoJincheon';
 }
 
 .Add_ToDo_List {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   /* flex-direction: column; */
+}
+
+.ToDo_List_Input {
+  width: auto;
+  height: 22px;
+  font-family: 'SaenggeoJincheon';
+}
+
+.ToDo_List_Print {
+  margin-top: 20px;
+  /* background-color: chartreuse; */
+}
+
+.ToDo_List_Element{
+  border: 3px;
+  color: rgb(145, 14, 172);
+  border: 5px;
+  font-family: 'SaenggeoJincheon';
+}
+
+.test_button {
+  margin-top: 5px;
 }
 
 /* .Click_Add_ToDo {
